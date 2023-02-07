@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileReader {
-	@SuppressWarnings("null")
 	public String readToString(String resource) throws FileNotFoundException {
 		URL url = getClass().getClassLoader().getResource(resource);
 		
@@ -19,7 +18,7 @@ public class FileReader {
 		if (url != null) {
 			File file = new File(url.getPath());
 			
-			Scanner sc = null;
+			Scanner sc = new Scanner(file);
 			
 			while(sc.hasNext()) {
 				String nextWord = sc.next();
