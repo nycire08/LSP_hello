@@ -1,2 +1,1 @@
-the rain in spain falls
-mainly in the plain
+Design and code a program that reads a text file, and counts the number of times each word that it contains appears 100

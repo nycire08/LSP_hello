@@ -32,6 +32,11 @@ public class FileReader {
 			
 				sc.close();
 				
+				for (String word : words) {
+					if (word.length() <= 3) {
+					continue;
+					}
+					word = word.toLowerCase();
 				for(int i = 0; i < words.size(); i++) {
 					System.out.println(words.get(i) + "appeared" + count.get(i));
 			}
