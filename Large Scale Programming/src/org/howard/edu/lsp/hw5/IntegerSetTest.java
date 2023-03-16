@@ -86,10 +86,10 @@ public class IntegerSetTest {
     @DisplayName("Test case for removeItem")
     public void testRemoveItem() {
         set.removeItem(3);
-        assertEquals(2, set.length());
+        assertEquals(0, set.length());
         assertFalse(set.getlist().contains(3));
         set.removeItem(4);
-        assertEquals(2, set.length());
+        assertEquals(0, set.length());
     }
     
     @Test
@@ -181,13 +181,11 @@ ArrayList<Integer> list = new ArrayList<Integer>();
         }
     }
     
-    @SuppressWarnings("null")
 	@Test
     @DisplayName("Test case for largest with empty set")
     public void testLargestEmpty() {
         assertThrows(IntegerSetException.class, () -> {
-            IntegerSet set2 = null;
-			set2.largest();
+			set.largest();
         });
     }
     
@@ -201,13 +199,11 @@ ArrayList<Integer> list = new ArrayList<Integer>();
         }
     }
     
-    @SuppressWarnings("null")
 	@Test
     @DisplayName("Test case for smallest with empty set")
     public void testSmallestEmpty() {
         assertThrows(IntegerSetException.class, () -> {
-            IntegerSet set2 = null;
-			set2.smallest();
+			set.smallest();
         });
     }
 }
